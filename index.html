@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#080b14">
-  <meta name="description" content="KAMONAMON — creative Website and web application developer, graphic design, branding, social media design, packaging and motion graphics.">
+  <meta name="description" content="KAMONAMON — creative website and web application developer, graphic design, branding, social media design, packaging and motion graphics.">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="KAMONAMON | Creative Design Studio">
+  <meta property="og:description" content="Bold, professional designs that help your brand stand out. Logos, social media, packaging, motion graphics, and web development.">
+  <meta property="og:image" content="logo1.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo1.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
   <title>KAMONAMON | Creative Design Studio</title>
+
   <style>
     :root {
       --bg: #080b14;
@@ -18,33 +34,28 @@
       --gold: #f6bd45;
       --line: rgba(255, 255, 255, .11)
     }
-    
-    * {
-      box-sizing: border-box
-    }
-    
-    html {
-      scroll-behavior: smooth
-    }
-    
+
+    * { box-sizing: border-box }
+
+    html { scroll-behavior: smooth }
+
     body {
       margin: 0;
       background: radial-gradient(ellipse at 80% 0%, #152344 0%, transparent 35%), var(--bg);
       color: var(--text);
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
       line-height: 1.6
     }
-    
-    a {
-      color: inherit;
-      text-decoration: none
-    }
-    
-    .wrap {
-      width: min(1120px, 92%);
-      margin: auto
-    }
-    
+
+    a { color: inherit; text-decoration: none }
+
+    .wrap { width: min(1120px, 92%); margin: auto }
+
+    /* Offset for sticky header on anchor scroll */
+    section[id] { scroll-margin-top: 90px; }
+
+    img { display: block; max-width: 100%; }
+
     header {
       position: sticky;
       top: 0;
@@ -53,7 +64,7 @@
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--line)
     }
-    
+
     .nav {
       display: flex;
       align-items: center;
@@ -61,17 +72,15 @@
       gap: 20px;
       min-height: 72px
     }
-    
+
     .brand {
       font-weight: 900;
       letter-spacing: 1px;
       font-size: 1.08rem
     }
-    
-    .brand span {
-      color: var(--blue)
-    }
-    
+
+    .brand span { color: var(--blue) }
+
     .navlinks {
       display: flex;
       gap: 22px;
@@ -79,11 +88,9 @@
       color: #d8deeb;
       font-size: .92rem
     }
-    
-    .navlinks a:hover {
-      color: var(--blue)
-    }
-    
+
+    .navlinks a:hover { color: var(--blue) }
+
     .menu {
       display: none;
       background: none;
@@ -91,9 +98,10 @@
       color: white;
       border-radius: 10px;
       padding: 8px 12px;
-      font-size: 1.1rem
+      font-size: 1.1rem;
+      cursor: pointer
     }
-    
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -109,33 +117,29 @@
       box-shadow: 0 8px 28px #ff263827;
       transition: .2s
     }
-    
-    .btn:hover {
-      transform: translateY(-2px)
-    }
-    
+
+    .btn:hover { transform: translateY(-2px) }
+
     .btn.secondary {
       background: transparent;
       border: 1px solid #58657d;
       box-shadow: none
     }
-    
+
     .btn.blue {
       background: linear-gradient(100deg, #0878ff, var(--blue));
       box-shadow: 0 8px 28px #11baff25
     }
-    
-    .hero {
-      padding: 62px 0 56px
-    }
-    
+
+    .hero { padding: 62px 0 56px }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1.03fr .97fr;
       align-items: center;
       gap: 44px
     }
-    
+
     .eyebrow {
       display: inline-flex;
       gap: 9px;
@@ -150,7 +154,7 @@
       letter-spacing: 1.2px;
       text-transform: uppercase
     }
-    
+
     .dot {
       width: 8px;
       height: 8px;
@@ -158,7 +162,7 @@
       border-radius: 50%;
       box-shadow: 0 0 14px var(--blue)
     }
-    
+
     h1 {
       font-size: clamp(2.7rem, 6vw, 5.3rem);
       line-height: 1.02;
@@ -166,27 +170,27 @@
       margin: 22px 0 20px;
       font-weight: 950
     }
-    
+
     h1 .gradient {
       background: linear-gradient(90deg, #fff 5%, #f6bd45 40%, #ff3648 68%, #19c6ff);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent
     }
-    
+
     .lead {
       color: var(--muted);
       font-size: 1.1rem;
       max-width: 590px
     }
-    
+
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
       margin: 27px 0
     }
-    
+
     .mini-points {
       display: flex;
       gap: 18px;
@@ -194,14 +198,14 @@
       color: #d7deed;
       font-size: .88rem
     }
-    
+
     .mini-points span:before {
       content: "✓";
       color: var(--blue);
       font-weight: 900;
       margin-right: 7px
     }
-    
+
     .logo-stage {
       border: 1px solid #ffffff17;
       border-radius: 28px;
@@ -211,7 +215,7 @@
       position: relative;
       overflow: hidden
     }
-    
+
     .logo-stage:before {
       content: "";
       position: absolute;
@@ -223,14 +227,14 @@
       background: #0878ff22;
       filter: blur(25px)
     }
-    
+
     .logo-grid {
       position: relative;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px
     }
-    
+
     .logo-card {
       background: #000;
       border: 1px solid #ffffff18;
@@ -241,20 +245,19 @@
       min-height: 170px;
       padding: 8px
     }
-    
+
     .logo-card:first-child {
       grid-column: 1/-1;
       min-height: 230px
     }
-    
+
     .logo-card img {
-      display: block;
       width: 100%;
       height: 100%;
       max-height: 255px;
       object-fit: contain
     }
-    
+
     .logo-caption {
       position: relative;
       color: #aebbd3;
@@ -264,17 +267,15 @@
       text-align: center;
       margin: 12px 0 0
     }
-    
-    section {
-      padding: 72px 0
-    }
-    
+
+    section { padding: 72px 0 }
+
     .section-head {
       text-align: center;
       max-width: 700px;
       margin: 0 auto 35px
     }
-    
+
     .kicker {
       color: var(--blue);
       text-transform: uppercase;
@@ -282,25 +283,25 @@
       font-weight: 900;
       font-size: .78rem
     }
-    
+
     .section-head h2 {
       font-size: clamp(2rem, 4vw, 3.1rem);
       line-height: 1.12;
       letter-spacing: -1px;
       margin: 10px 0
     }
-    
+
     .section-head p {
       color: var(--muted);
       margin: 0
     }
-    
+
     .services {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 15px
     }
-    
+
     .service {
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -308,12 +309,12 @@
       background: linear-gradient(145deg, #121827, #0c101b);
       transition: .22s
     }
-    
+
     .service:hover {
       transform: translateY(-5px);
       border-color: #11baff77
     }
-    
+
     .icon {
       width: 46px;
       height: 46px;
@@ -325,18 +326,18 @@
       border: 1px solid #1a5b84;
       margin-bottom: 15px
     }
-    
+
     .service h3 {
       margin: 0 0 7px;
       font-size: 1.08rem
     }
-    
+
     .service p {
       color: var(--muted);
       font-size: .92rem;
       margin: 0
     }
-    
+
     .tag-row {
       display: flex;
       flex-wrap: wrap;
@@ -344,7 +345,7 @@
       gap: 10px;
       margin-top: 27px
     }
-    
+
     .tag {
       border: 1px solid var(--line);
       background: #0d1320;
@@ -353,36 +354,34 @@
       color: #d0d8e8;
       font-size: .85rem
     }
-    
+
     .process {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px
     }
-    
+
     .step {
       padding: 22px;
       border-left: 2px solid #1f8fc0;
       background: #0d1320;
       border-radius: 0 15px 15px 0
     }
-    
+
     .step strong {
       color: var(--gold);
       font-size: .8rem;
       letter-spacing: 1px
     }
-    
-    .step h3 {
-      margin: 8px 0
-    }
-    
+
+    .step h3 { margin: 8px 0 }
+
     .step p {
       color: var(--muted);
       font-size: .9rem;
       margin: 0
     }
-    
+
     .cta {
       border: 1px solid #254a71;
       border-radius: 26px;
@@ -393,24 +392,24 @@
       justify-content: space-between;
       gap: 30px
     }
-    
+
     .cta h2 {
       font-size: clamp(1.8rem, 4vw, 3rem);
       line-height: 1.1;
       margin: 8px 0
     }
-    
+
     .cta p {
       color: var(--muted);
       max-width: 620px
     }
-    
+
     .contact-grid {
       display: grid;
       grid-template-columns: .8fr 1.2fr;
       gap: 28px
     }
-    
+
     .contact-info,
     .contact-form {
       background: #101522;
@@ -418,32 +417,28 @@
       border-radius: 20px;
       padding: 25px
     }
-    
-    .contact-info p {
-      color: var(--muted)
-    }
-    
+
+    .contact-info p { color: var(--muted) }
+
     .contact-line {
       padding: 13px 0;
       border-bottom: 1px solid var(--line)
     }
-    
-    .contact-line:last-child {
-      border: 0
-    }
-    
+
+    .contact-line:last-child { border: 0 }
+
     .contact-line small {
       display: block;
       color: var(--muted)
     }
-    
+
     label {
       display: block;
       font-size: .86rem;
       color: #dbe2f1;
       margin: 0 0 6px
     }
-    
+
     input,
     select,
     textarea {
@@ -457,80 +452,90 @@
       margin-bottom: 15px;
       outline: none
     }
-    
+
     input:focus,
     select:focus,
     textarea:focus {
       border-color: var(--blue)
     }
-    
+
     textarea {
       min-height: 120px;
       resize: vertical
     }
-    
+
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 13px
     }
-    
+
     .form-note {
       font-size: .8rem;
       color: var(--muted);
       margin: 10px 0 0
     }
-    
+
     footer {
       border-top: 1px solid var(--line);
       padding: 28px 0;
       color: var(--muted);
       font-size: .86rem
     }
-    
+
     .foot {
       display: flex;
       justify-content: space-between;
       gap: 16px;
       flex-wrap: wrap
     }
-    
-    .foot b {
-      color: white
+
+    .foot b { color: white }
+
+    .backtop { color: var(--blue) }
+
+    .social-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 18px
     }
-    
-    .backtop {
+
+    .social-row a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 99px;
+      background: #0d1320;
+      border: 1px solid var(--line);
+      font-size: .82rem;
+      transition: .2s
+    }
+
+    .social-row a:hover {
+      border-color: var(--blue);
       color: var(--blue)
     }
-    
+
     @media(max-width:800px) {
 
       .hero-grid,
-      .contact-grid {
-        grid-template-columns: 1fr
-      }
-      
-      .hero {
-        padding-top: 42px
-      }
-      
-      .hero-grid {
-        gap: 28px
-      }
-      
-      .services {
-        grid-template-columns: repeat(2, 1fr)
-      }
-      
-      .process {
-        grid-template-columns: repeat(2, 1fr)
-      }
-      
+      .contact-grid { grid-template-columns: 1fr }
+
+      .hero { padding-top: 42px }
+
+      .hero-grid { gap: 28px }
+
+      .services { grid-template-columns: repeat(2, 1fr) }
+
+      .process { grid-template-columns: repeat(2, 1fr) }
+
       .cta {
         align-items: flex-start;
         flex-direction: column
       }
-      
+
       .navlinks {
         display: none;
         position: absolute;
@@ -543,50 +548,38 @@
         flex-direction: column;
         align-items: flex-start
       }
-      
-      .navlinks.open {
-        display: flex
-      }
-      
-      .menu {
-        display: block
-      }
-      
-      .nav .btn {
-        display: none
-      }
+
+      .navlinks.open { display: flex }
+
+      .menu { display: block }
+
+      .nav .btn { display: none }
     }
-    
+
     @media(max-width:520px) {
-      h1 {
-        letter-spacing: -1.7px
-      }
-      
+      h1 { letter-spacing: -1.7px }
+
       .services,
-      .process {
-        grid-template-columns: 1fr
-      }
-      
-      .logo-card:first-child {
-        min-height: 190px
-      }
-      
-      .logo-card {
-        min-height: 130px
-      }
-      
+      .process { grid-template-columns: 1fr }
+
+      .logo-card:first-child { min-height: 190px }
+
+      .logo-card { min-height: 130px }
+
       .form-row {
         grid-template-columns: 1fr;
         gap: 0
       }
-      
-      section {
-        padding: 55px 0
-      }
-      
-      .hero-actions .btn {
-        width: 100%
-      }
+
+      section { padding: 55px 0 }
+
+      .hero-actions .btn { width: 100% }
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
     }
   </style>
 </head>
@@ -596,12 +589,16 @@
     <div class="wrap nav">
       <a class="brand" href="#home">KAMON <span>GRAPHICS AND DEVELOPMENTS</span></a>
       <nav class="navlinks" id="navlinks">
-        <a href="#home">Home</a><a href="#services">Services</a><a href="#about">How It Works</a><a href="#contact">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">How It Works</a>
+        <a href="#contact">Contact</a>
       </nav>
       <a class="btn" href="#contact">Start a Project ↗</a>
-      <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+      <button class="menu" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">☰</button>
     </div>
   </header>
+
   <main>
     <section class="hero" id="home">
       <div class="wrap hero-grid">
@@ -609,20 +606,27 @@
           <div class="eyebrow"><span class="dot"></span> Creative Design Studio</div>
           <h1>Ideas into <span class="gradient">Visual Masterpieces.</span></h1>
           <p class="lead">Welcome to KAMON GRAPHICS AND DEVELOPMENTS — bold, professional designs that help your brand stand out. From logos to social media campaigns, we turn your ideas into visuals people remember.</p>
-          <div class="hero-actions"><a class="btn" href="#contact">Order a Design ↗</a><a class="btn secondary" href="#services">Explore Services ↓</a></div>
-          <div class="mini-points"><span>Creative concepts</span><span>Professional finish</span><span>Made for your brand</span></div>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Order a Design ↗</a>
+            <a class="btn secondary" href="#services">Explore Services ↓</a>
+          </div>
+          <div class="mini-points">
+            <span>Creative concepts</span>
+            <span>Professional finish</span>
+            <span>Made for your brand</span>
+          </div>
         </div>
         <div class="logo-stage">
           <div class="logo-grid">
-            <div class="logo-card"><img src="logo1.png" alt="KAMONAMON crowned red, blue and white emblem"></div>
-            <div class="logo-card"><img src="logo2.png" alt="KAMONAMON DESIGN red and blue monogram"></div>
-            <div class="logo-card"><img src="logo3.png" alt="KAMONAMON gold AG monogram"></div>
+            <div class="logo-card"><img src="logo1.png" alt="KAMONAMON crowned red, blue and white emblem" loading="lazy"></div>
+            <div class="logo-card"><img src="logo2.png" alt="KAMONAMON DESIGN red and blue monogram" loading="lazy"></div>
+            <div class="logo-card"><img src="logo3.png" alt="KAMONAMON gold AG monogram" loading="lazy"></div>
           </div>
           <div class="logo-caption">Design · Create · Inspire</div>
         </div>
       </div>
     </section>
-    
+
     <section id="services">
       <div class="wrap">
         <div class="section-head">
@@ -677,10 +681,17 @@
             <p>Have another design idea? Tell us what you need and we'll discuss it.</p>
           </article>
         </div>
-        <div class="tag-row"><span class="tag">Album / Music Cover</span><span class="tag">Menu Design</span><span class="tag">Invitation Cards</span><span class="tag">YouTube Thumbnails</span><span class="tag">Product Mockups</span><span class="tag">Print-Ready Artwork</span></div>
+        <div class="tag-row">
+          <span class="tag">Album / Music Cover</span>
+          <span class="tag">Menu Design</span>
+          <span class="tag">Invitation Cards</span>
+          <span class="tag">YouTube Thumbnails</span>
+          <span class="tag">Product Mockups</span>
+          <span class="tag">Print-Ready Artwork</span>
+        </div>
       </div>
     </section>
-    
+
     <section id="about">
       <div class="wrap">
         <div class="section-head">
@@ -708,7 +719,7 @@
         </div>
       </div>
     </section>
-    
+
     <section>
       <div class="wrap">
         <div class="cta">
@@ -716,11 +727,12 @@
             <div class="kicker">Let's Work Together</div>
             <h2>Your brand deserves great design.</h2>
             <p>Tell KAMON what you're building. We'll discuss your requirements, deadline and the right design package for your project.</p>
-          </div><a class="btn blue" href="#contact">Discuss Your Project ↗</a>
+          </div>
+          <a class="btn blue" href="#contact">Discuss Your Project ↗</a>
         </div>
       </div>
     </section>
-    
+
     <section id="contact">
       <div class="wrap">
         <div class="section-head">
@@ -730,17 +742,39 @@
         </div>
         <div class="contact-grid">
           <div class="contact-info">
-            <h3>KAMON DESIGNS AND DEVELOPMENTS</h3>
+            <h3>KAMON GRAPHICS AND DEVELOPMENTS</h3>
             <p>Creative • Unique • Professional</p>
-            <div class="contact-line"><small>Services</small><b>Graphic Design · Branding · Motion · 3D</b></div>
-            <div class="contact-line"><small>Response details</small><b>Tell us your preferred deadline</b></div>
-            <div class="contact-line"><small>Social media</small><b>Add your Instagram / TikTok / Facebook links here</b></div>
-            <p class="form-note">Before publishing, replace the sample WhatsApp number in the code with your real business number.</p>
+            <div class="contact-line">
+              <small>Services</small>
+              <b>Graphic Design · Branding · Motion · 3D · Web Development</b>
+            </div>
+            <div class="contact-line">
+              <small>Response details</small>
+              <b>Tell us your preferred deadline</b>
+            </div>
+            <div class="contact-line">
+              <small>Email</small>
+              <b>hello@kamonamon.com</b>
+            </div>
+            <div class="contact-line">
+              <small>Social media</small>
+              <div class="social-row">
+                <a href="https://www.linkedin.com/in/kamugisha-amon" target="_blank" rel="noopener">🔗 LinkedIn</a>
+                <a href="https://www.instagram.com/kamugisha.amon" target="_blank" rel="noopener">📸 Instagram</a>
+                <a href="https://x.com/amonkamugisha8555" target="_blank" rel="noopener">🐦 X (Twitter)</a>
+              </div>
+            </div>
+            <p class="form-note">Your project details are sent via WhatsApp — no payment is taken on this site.</p>
           </div>
-          <form class="contact-form" id="projectForm">
+          <form class="contact-form" id="projectForm" novalidate>
             <div class="form-row">
-              <div><label for="name">Your name</label><input id="name" name="name" placeholder="Enter your name" required></div>
-              <div><label for="service">Service needed</label><select id="service" name="service" required>
+              <div>
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" placeholder="Enter your name" required>
+              </div>
+              <div>
+                <label for="service">Service needed</label>
+                <select id="service" name="service" required>
                   <option value="">Choose a service</option>
                   <option>Website</option>
                   <option>Web application</option>
@@ -750,46 +784,101 @@
                   <option>Flyer / Banner</option>
                   <option>Brand Identity</option>
                   <option>Motion Graphics</option>
-                  <option>Infor-graphics</option>
+                  <option>Infographics</option>
                   <option>3D Design</option>
                   <option>Business Card</option>
                   <option>Other / Custom Design</option>
-                </select></div>
+                </select>
+              </div>
             </div>
             <div class="form-row">
-              <div><label for="deadline">Deadline</label><input id="deadline" name="deadline" placeholder="e.g. 3 days / 20 October"></div>
-              <div><label for="budget">Budget (optional)</label><input id="budget" name="budget" placeholder="e.g. shs50,000"></div>
+              <div>
+                <label for="email">Email (optional)</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com">
+              </div>
+              <div>
+                <label for="deadline">Deadline</label>
+                <input id="deadline" name="deadline" type="text" placeholder="e.g. 3 days / 20 October">
+              </div>
             </div>
-            <label for="details">Project details</label><textarea id="details" name="details" placeholder="Describe the design, wording, colours, size and any reference images..." required></textarea>
+            <label for="budget">Budget (optional)</label>
+            <input id="budget" name="budget" type="text" placeholder="e.g. UGX 50,000">
+            <label for="details">Project details</label>
+            <textarea id="details" name="details" placeholder="Describe the design, wording, colours, size and any reference images. You can paste a link to a Google Drive folder with references." required></textarea>
             <button class="btn blue" type="submit">Send Project on WhatsApp ↗</button>
-            <p class="form-note">This form opens WhatsApp with your project details. It does not take payments on this website.</p>
+            <p class="form-note" id="formStatus">This form opens WhatsApp with your project details. It does not take payments on this website.</p>
           </form>
         </div>
       </div>
     </section>
   </main>
+
   <footer>
     <div class="wrap foot">
       <div>© <span id="year"></span> <b>KAMONAMON</b>. All rights reserved.</div>
       <div>Where creativity meets design. <a class="backtop" href="#home">Back to top ↑</a></div>
     </div>
   </footer>
+
   <script>
+    // ---------- Mobile menu ----------
     const menuBtn = document.getElementById('menuBtn');
     const navlinks = document.getElementById('navlinks');
-    menuBtn.addEventListener('click', () => navlinks.classList.toggle('open'));
-    navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navlinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      menuBtn.textContent = isOpen ? '✕' : '☰';
+    });
+
+    navlinks.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => {
+        navlinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = '☰';
+      })
+    );
+
+    // ---------- Year ----------
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('projectForm').addEventListener('submit', function(e) {
+
+    // ---------- Project form → WhatsApp ----------
+    document.getElementById('projectForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      // IMPORTANT: Replace this sample number with your WhatsApp number, including country code and without + or spaces.
+
+      // IMPORTANT: Replace with your real WhatsApp number (country code, no +, no spaces)
       const whatsappNumber = '256750691030';
-      if (whatsappNumber.includes('X')) { alert('Please add your WhatsApp number in index.html first. Search for 256750691030 and replace it with your number.'); return; }
+
+      // Simple validation feedback
+      const name = this.querySelector('#name').value.trim();
+      const service = this.querySelector('#service').value.trim();
+      const details = this.querySelector('#details').value.trim();
+
+      if (!name || !service || !details) {
+        alert('Please fill in your name, select a service, and add project details.');
+        return;
+      }
+
       const data = new FormData(this);
-      const message = `Hello KAMON! I would like to request a design.\\n\\nName: ${data.get('name')}\\nService: ${data.get('service')}\\nDeadline: ${data.get('deadline')||'Not specified'}\\nBudget: ${data.get('budget')||'Not specified'}\\nProject details: ${data.get('details')}`;
-      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+      const message =
+        `Hello KAMON! I would like to request a design.\n\n` +
+        `Name: ${data.get('name')}\n` +
+        `Email: ${data.get('email') || 'Not provided'}\n` +
+        `Service: ${data.get('service')}\n` +
+        `Deadline: ${data.get('deadline') || 'Not specified'}\n` +
+        `Budget: ${data.get('budget') || 'Not specified'}\n` +
+        `Project details: ${data.get('details')}`;
+
+      window.open(
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+        '_blank'
+      );
+
+      // Reset form and show confirmation
+      this.reset();
+      document.getElementById('formStatus').textContent =
+        '✅ Your details were opened in WhatsApp. Send the message to complete your request.';
     });
   </script>
 </body>
-
 </html>
